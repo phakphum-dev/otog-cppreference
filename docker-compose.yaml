@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  cppreference:
+    build: .
+    container_name: otog-cppreference
+    restart: always
+    volumes:
+      - ./reference:/usr/src/app/reference:rw
+    ports:
+      - '4000:4000'
